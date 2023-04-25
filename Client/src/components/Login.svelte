@@ -1,4 +1,3 @@
-<!-- Auth.svelte -->
 <script>
     let email = '';
     let password = '';
@@ -27,35 +26,11 @@
     };
 </script>
 
-<style>
-    .auth-container {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .form-container {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    button {
-        cursor: pointer;
-    }
-</style>
-
 <div class="auth-container">
     <div class="form-container">
         <h2>Login</h2>
         <input type="email" bind:value="{email}" placeholder="Email" />
         <input type="password" bind:value="{password}" placeholder="Password" />
         <button on:click="{login}">Login</button>
-    </div>
-    <div class="form-container">
-        <h2>Sign Up</h2>
-        <input type="email" bind:value="{email}" placeholder="Email" />
-        <input type="password" bind:value="{password}" placeholder="Password" />
-        <input type="password" bind:value="{confirmPassword}" placeholder="Confirm Password" />
-        <button on:click="{signUp}">Sign Up</button>
     </div>
 </div>
